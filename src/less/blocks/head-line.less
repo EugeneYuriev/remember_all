@@ -1,0 +1,78 @@
+.head-line {
+  box-sizing: border-box;
+  .set-font-params(@font-family-header, @font-size-large, 30px, 700);
+  text-align: center;
+  margin: 0;
+
+  &--index {
+    min-height: 300px;
+    padding-top: 85px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    background: #fafafa url("../img/hero-mobile@1x.jpg") no-repeat;
+    background-position-x: center;
+
+    @media @retina-mobile {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px 373px;
+    }
+  }
+
+  &--inner-page{
+    padding: 73px 0;
+
+    background: @headline-color;
+  }
+
+  &--form {
+    padding: 78px 0;
+  }
+}
+
+@media @tablet-widths {
+  .head-line {
+    width: 100%;
+    margin: auto;
+    .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
+
+    &--index {
+      min-height: 555px;
+      padding-top: 80px;
+      padding-left: 130px;
+      padding-right: 130px;
+
+      background-image: url("../img/hero-desktop@1x.jpg");
+      background-position-y: -70px;
+
+      @media @retina-tablet {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: 1150px 746px;
+      }
+    }
+
+    &--inner-page {
+      padding-top: 20px;
+      padding-bottom: 80px;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .head-line {
+    .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
+
+    &--index {
+      min-height: 580px;
+      padding-top: 110px;
+      padding-left: 260px;
+      padding-right: 260px;
+      background-position-y: -40px;
+    }
+
+    &--inner-page {
+      padding-top: 50px;
+      padding-bottom: 100px;
+    }
+  }
+}

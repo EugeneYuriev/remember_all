@@ -1,0 +1,38 @@
+.contacts-address {
+
+  .content-wrapper(@mobile-margin-lr);
+  margin-bottom: 25px;
+}
+
+.contacts-address__label {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 30px;
+
+  line-height: 30px;
+}
+
+.contacts-address__value {
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+
+  line-height: 30px;
+}
+
+@media @tablet-widths {
+  .contacts-address {
+    width: 50%;
+    .reset-marg-pad();
+  }
+
+  .contacts-address__label {
+    padding-right: 20px;
+  }
+}
+
+@media @desktop-widths {
+  .contacts-address {
+    width: 100%;
+  }
+}

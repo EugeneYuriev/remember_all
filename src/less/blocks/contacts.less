@@ -1,0 +1,131 @@
+.contacts {
+  margin-bottom: 40px;
+}
+
+.contacts__title {
+  .reset-marg-pad();
+  .content-wrapper(@mobile-margin-lr);
+  margin-bottom: 25px;
+
+  .set-font-params(@font-family-header, @font-size-large, 30px, 700);
+}
+
+.contacts__map {
+  width: 320px;
+  min-height: 460px;
+  margin-bottom: 40px;
+
+  background: #e1e6e9 url("../img/map-mobile@1x.jpg") no-repeat;
+  background-position: center;
+}
+
+.contacts__ya-map {
+  width: inherit;
+  min-height: inherit;
+}
+
+.contacts__btn {
+  .content-wrapper(@mobile-margin-lr);
+}
+
+@media @tablet-widths {
+  .contacts {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 50px;
+
+      width: 50px;
+      height: 90px;
+
+      background: #ffffff url("../img/icon-flag.svg") no-repeat;
+    }
+  }
+
+  .contacts__title {
+    .content-wrapper(@tablet-margin-lr);
+    margin-bottom: 50px;
+
+    .set-font-params(@font-family-header, @tablet-font-size-large, 50px, 700);
+  }
+
+  .contacts__info {
+    display: flex;
+    flex-wrap: wrap;
+
+  .content-wrapper(@tablet-margin-lr);
+    margin-bottom: 60px;
+  }
+
+  .contacts__map {
+    width: 100%;
+    margin-bottom: 50px;
+    background-image: url("../img/map-tablet@1x.jpg");
+  }
+
+  .contacts__btn {
+    width: 230px;
+    margin: auto;
+  }
+}
+
+@media @desktop-widths {
+  .contacts {
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    min-height: 460px;
+    .content-wrapper(@desktop-margin-lr);
+    margin-bottom: 100px;
+
+    &::before {
+      top: 60px;
+      left: 60px;
+    }
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50%;
+    background-image: url("../img/map-desktop@1x.jpg");
+  }
+
+  .contacts__ya-map {
+    width: 100%;
+  }
+
+  .contacts__title {
+    width: 350px;
+    margin-left: 170px;
+    padding-top: 65px;
+    .set-font-params(@font-family-header, @desktop-font-size-large, 57px, 700);
+  }
+
+  .contacts__info {
+    width: 350px;
+    margin-left: 175px;
+    margin-bottom: 0;
+
+    flex-direction: column;
+  }
+
+  .contacts__btn {
+    width: 230px;
+    margin-left: 175px;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+}
